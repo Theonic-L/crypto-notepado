@@ -2,13 +2,14 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:p="clr-namespace:PasswordManager.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="MainPage">
 
     <Grid>
-        <TextBox x:Name="txtText" AcceptsReturn="True" Text="TextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Roboto, Arial" Margin="0,0,0,46" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="txtText_TextChanged" />
+        <TextBox x:Name="txtText" AcceptsReturn="True" Text="TextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Roboto, Arial" Margin="0,0,0,46" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="txtText_TextChanged" FontSize="{Binding Source={x:Static p:Settings.Default}, Path=TextSize}" />
         <Button x:Name="btnSave" Style="{StaticResource ButtonStyleMaterial1}" Content="Сохранить" HorizontalAlignment="Stretch" Height="46" VerticalAlignment="Bottom" Click="btnSave_Click" FontSize="16" FontFamily="Roboto Black, Arial Black"/>
     </Grid>
 </Page>

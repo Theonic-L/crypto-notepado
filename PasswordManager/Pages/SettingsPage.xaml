@@ -24,6 +24,10 @@
             <Grid>
                 <CheckBox x:Name="checkQuestSave" Content="Спрашивать подтверждение при сохранении" HorizontalAlignment="Left" Height="19" Margin="0,7,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=QuestSave, Mode=TwoWay}"/>
                 <CheckBox Content="Спрашивать подтверждение при выходе" HorizontalAlignment="Left" Height="19" Margin="0,26,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=QuestExit, Mode=TwoWay}"/>
+                <Label Content="Размер текста" HorizontalAlignment="Left" Height="24" Margin="0,45,0,0" VerticalAlignment="Top" Width="93" BorderThickness="0,0,0,0">
+                </Label>
+                <Slider HorizontalAlignment="Stretch" Height="19" Margin="98,50,64,0" VerticalAlignment="Top" TickPlacement="BottomRight" Maximum="99" Minimum="1" IsSnapToTickEnabled="True" Value="{Binding Source={x:Static p:Settings.Default}, Path=TextSize, Mode=TwoWay}"/>
+                <Label Content="{Binding Source={x:Static p:Settings.Default}, Path=TextSize, Mode=TwoWay}" HorizontalAlignment="Right" Height="24" Margin="419,45,21,0" VerticalAlignment="Top" />
             </Grid>
         </GroupBox>
 
