@@ -1,0 +1,27 @@
+﻿<Page x:Class="PasswordManager.Pages.OpenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="240.226" d:DesignWidth="398.12"
+	Title="OpenPage">
+
+    <Grid>
+        <GroupBox Header="Открытие" HorizontalAlignment="Stretch" Margin="12,19,12,48" VerticalAlignment="Stretch" >
+            <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" >
+                <Label Content="Путь" HorizontalAlignment="Left" Height="28" Margin="10,24,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtPath" HorizontalAlignment="Stretch" Height="28" Margin="62,24,88,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="путь к открываеммому файлу" MaxLines="1"/>
+                <Button x:Name="btnOpen" Content="Выбрать" HorizontalAlignment="Right" Height="28" Margin="270,24,8,0" VerticalAlignment="Top" Width="83" Click="btnOpen_Click"/>
+                <CheckBox x:Name="checkPass" Content="" HorizontalAlignment="Left" Height="20" Margin="10,57,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-2.398,0.08" IsChecked="True" Unchecked="checkPass_Unchecked"/>
+                <Label Content="Пароль" HorizontalAlignment="Left" Height="31" Margin="31,57,0,0" VerticalAlignment="Top" Width="52"/>
+                <PasswordBox x:Name="txtPass" HorizontalAlignment="Stretch" Height="31" Margin="96,57,8,52" VerticalAlignment="Top"/>
+                <Button x:Name="btnPathSave" Content="Запомнить путь" HorizontalAlignment="Left" Height="27" Margin="10,114,0,0" VerticalAlignment="Top" Width="109" Click="btnPathSave_Click"/>
+                <Button x:Name="btnPathDel" Content="Забыть путь" HorizontalAlignment="Left" Height="27" Margin="124,114,0,0" VerticalAlignment="Top" Width="109" Click="btnPathDel_Click"/>
+            </Grid>
+
+        </GroupBox>
+        <Button x:Name="btnStart" Content="Открыть" HorizontalAlignment="Stretch" Height="36" Margin="12,0,12,5" VerticalAlignment="Bottom" Click="btnStart_Click"/>
+
+    </Grid>
+</Page>

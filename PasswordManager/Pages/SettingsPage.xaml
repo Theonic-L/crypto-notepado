@@ -1,0 +1,27 @@
+﻿<Page x:Class="PasswordManager.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="327.068" d:DesignWidth="473.684"
+	Title="SettingsPage">
+
+    <Grid>
+        <GroupBox Header="Автоматическое открытие" HorizontalAlignment="Stretch" Height="133" VerticalAlignment="Top">
+            <Grid>
+                <CheckBox x:Name="checkAutoOpenOn" Content="Включить автоматическое открытие" HorizontalAlignment="Left" Height="20" Margin="4,11,-2,0" VerticalAlignment="Top" Width="460" Unchecked="checkAutoOpenOn_Unchecked"/>
+                <Label Content="Путь" HorizontalAlignment="Left" Height="28" Margin="10,32,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtPath" HorizontalAlignment="Stretch" Height="28" Margin="62,32,88,2" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="путь к открываеммому файлу" MaxLines="1" IsEnabled="False" TextChanged="txtPath_TextChanged"/>
+                <Button x:Name="btnOpen" Content="Выбрать" HorizontalAlignment="Right" Height="28" Margin="270,32,2,0" VerticalAlignment="Top" Width="83" Click="btnOpen_Click" IsEnabled="False"/>
+                <CheckBox x:Name="checkPass" Content="" HorizontalAlignment="Left" Height="31" Margin="10,65,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-2.398,0.08" Unchecked="checkPass_Unchecked" IsEnabled="False"/>
+                <Label Content="Пароль" HorizontalAlignment="Left" Height="31" Margin="31,65,0,0" VerticalAlignment="Top" Width="52"/>
+                <TextBox x:Name="txtPass" HorizontalAlignment="Stretch" Height="31" Margin="94,65,2,0" VerticalAlignment="Top" IsEnabled="False" TextChanged="txtPass_PasswordChanged"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Другие настройки" HorizontalAlignment="Stretch" Height="125" Margin="0,138,0,0" VerticalAlignment="Top">
+            <CheckBox x:Name="checkQuestSave" Content="Спрашивать подтверждение при сохранении" HorizontalAlignment="Left" Height="19" Margin="0,7,0,0" VerticalAlignment="Top" Width="464" IsThreeState="True"/>
+        </GroupBox>
+
+    </Grid>
+</Page>
