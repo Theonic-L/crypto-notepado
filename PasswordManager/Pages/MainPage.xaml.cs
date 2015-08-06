@@ -29,17 +29,21 @@ namespace PasswordManager
         }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Сохранить файл - вы уверены?", "Сохранение файла", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            switch(result)
+            if (Properties.Settings.Default.QuestSave)
             {
-                case MessageBoxResult.Yes:
-                    Loader.Save();
-                    break;
-                case MessageBoxResult.No:
-                    // User pressed No button
-                    // ...
-                    break;
+                MessageBoxResult result = MessageBox.Show("Сохранить файл - вы уверены?", "Сохранение файла", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        Loader.Save();
+                        break;
+                    case MessageBoxResult.No:
+                        // User pressed No button
+                        // ...
+                        break;
+                }
             }
+            else Loader.Save();
         }
     }
 }

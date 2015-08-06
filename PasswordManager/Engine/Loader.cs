@@ -28,8 +28,12 @@ namespace PasswordManager.Engine
         }
         static public void Save()
         {
-            string text = CryptAES.EncryptString(Links.txtText.Text, password);
-            File.WriteAllText(path_file, text);
+            try
+            {
+                string text = CryptAES.EncryptString(Links.txtText.Text, password);
+                File.WriteAllText(path_file, text);
+            }
+            catch { }
         }
     }
 }

@@ -108,5 +108,10 @@ namespace PasswordManager.Pages
             Properties.Settings.Default.Save();
             //MessageBox.Show(Properties.Settings.Default.AutoOpenPass);
         }
+
+        private void Grid_Unloaded(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }
