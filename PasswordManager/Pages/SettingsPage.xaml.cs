@@ -111,7 +111,7 @@ namespace PasswordManager.Pages
 
         private void Grid_Unloaded(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.Save();
         }
     }
 }

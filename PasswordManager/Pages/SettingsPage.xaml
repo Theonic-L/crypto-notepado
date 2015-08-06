@@ -21,7 +21,10 @@
             </Grid>
         </GroupBox>
         <GroupBox Header="Другие настройки" HorizontalAlignment="Stretch" Height="125" Margin="0,138,0,0" VerticalAlignment="Top">
-            <CheckBox x:Name="checkQuestSave" Content="Спрашивать подтверждение при сохранении" HorizontalAlignment="Left" Height="19" Margin="0,7,0,0" VerticalAlignment="Top" Width="464" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=QuestSave, Mode=TwoWay}"/>
+            <Grid>
+                <CheckBox x:Name="checkQuestSave" Content="Спрашивать подтверждение при сохранении" HorizontalAlignment="Left" Height="19" Margin="0,7,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=QuestSave, Mode=TwoWay}"/>
+                <CheckBox Content="Спрашивать подтверждение при выходе" HorizontalAlignment="Left" Height="19" Margin="0,26,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=QuestExit, Mode=TwoWay}"/>
+            </Grid>
         </GroupBox>
 
     </Grid>

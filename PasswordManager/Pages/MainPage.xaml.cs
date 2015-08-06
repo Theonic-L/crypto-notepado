@@ -45,5 +45,11 @@ namespace PasswordManager
             }
             else Loader.Save();
         }
+
+        private void txtText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtText.Text != "TextBox")
+                Loader.text_decrypt = txtText.Text;
+        }
     }
 }

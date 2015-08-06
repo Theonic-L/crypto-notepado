@@ -57,25 +57,41 @@ namespace PasswordManager
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBox.Show("HI CLOSING");
-            //Loader.Save();
+            if (Properties.Settings.Default.QuestExit)
+            {
+                MessageBoxResult result = MessageBox.Show("Сохранить изменения?", "Выход", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        Loader.Save();
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                    case MessageBoxResult.Cancel:
+                        e.Cancel = true;
+                        break;
+                }
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.Upgrade();
+            Properties.Settings.Default.Save();
             SettingsPage page = new SettingsPage();
             frmMain.Navigate(page);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.Save();
             OpenPage page = new OpenPage();
             frmMain.Navigate(page);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.Save();
             MainPage page = new MainPage();
             frmMain.Navigate(page);
         }

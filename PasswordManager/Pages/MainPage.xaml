@@ -8,7 +8,7 @@
 	Title="MainPage">
 
     <Grid>
-        <TextBox x:Name="txtText" AcceptsReturn="True" Text="TextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Roboto, Arial" Margin="0,0,0,46" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="txtText" AcceptsReturn="True" Text="TextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Roboto, Arial" Margin="0,0,0,46" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="txtText_TextChanged" />
         <Button x:Name="btnSave" Style="{StaticResource ButtonStyleMaterial1}" Content="Сохранить" HorizontalAlignment="Stretch" Height="46" VerticalAlignment="Bottom" Click="btnSave_Click" FontSize="16" FontFamily="Roboto Black, Arial Black"/>
     </Grid>
 </Page>

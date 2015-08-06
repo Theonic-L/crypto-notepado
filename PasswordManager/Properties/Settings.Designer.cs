@@ -106,5 +106,17 @@ namespace PasswordManager.Properties {
                 this["QuestSave"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool QuestExit {
+            get {
+                return ((bool)(this["QuestExit"]));
+            }
+            set {
+                this["QuestExit"] = value;
+            }
+        }
     }
 }
