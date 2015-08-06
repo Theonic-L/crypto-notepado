@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows;
 using PasswordManager.Cryptography;
 
 namespace PasswordManager.Engine
@@ -33,7 +34,10 @@ namespace PasswordManager.Engine
                 string text = CryptAES.EncryptString(Links.txtText.Text, password);
                 File.WriteAllText(path_file, text);
             }
-            catch { }
+            catch 
+            {
+                MessageBox.Show("Ошибка! Файл не выбран.");
+            }
         }
     }
 }
