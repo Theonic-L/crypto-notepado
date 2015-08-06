@@ -1,11 +1,11 @@
 ﻿<Window x:Class="PasswordManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="466.579" Width="525" Closing="Window_Closing">
+        Title="Криптоблокнот" Height="466.579" Width="525" Closing="Window_Closing">
     <Grid>
         <Frame x:Name="frmMain" Margin="15,64,15,15" Content="Frame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/PasswordManager;component/Pages/OpenPage.xaml" NavigationUIVisibility="Hidden"/>
         <Button Style="{StaticResource ButtonStyleMaterial2}" Content="Настройки" HorizontalAlignment="Stretch" Height="37" Margin="141,18,169,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Roboto Light" FontSize="16"/>
-        <Button Style="{StaticResource ButtonStyleMaterial1}" Content="Файл" HorizontalAlignment="Right" Height="37" Margin="0,18,18,0" VerticalAlignment="Top" FontFamily="Roboto" FontSize="16" Width="151" Click="Button_Click_2"/>
+        <Button Style="{StaticResource ButtonStyleMaterial1}" Content="Файл" HorizontalAlignment="Right" Height="37" Margin="0,18,18,0" VerticalAlignment="Top" FontFamily="Roboto" FontSize="16" Width="151" Click="Button_Click_2" ToolTip="Показывает открытый файл."/>
         <Button Style="{StaticResource ButtonStyleMaterial3}" Content="Открыть" HorizontalAlignment="Left" Height="37" Margin="15,18,0,0" VerticalAlignment="Top" Width="126" FontFamily="Roboto Light" FontSize="16" Click="Button_Click_1"/>
 
     </Grid>
