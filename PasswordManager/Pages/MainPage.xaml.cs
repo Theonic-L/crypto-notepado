@@ -26,6 +26,7 @@ namespace PasswordManager
             InitializeComponent();
             Links.txtText = txtText;
             txtText.Text = Loader.text_decrypt;
+            txtText.TextChanged += txtText_TextChanged;
         }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -48,7 +49,7 @@ namespace PasswordManager
 
         private void txtText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtText.Text != "TextBox")
+            //if (txtText.Text != "TextBox")
                 Loader.text_decrypt = txtText.Text;
         }
     }
