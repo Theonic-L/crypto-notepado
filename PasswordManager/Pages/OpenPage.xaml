@@ -11,9 +11,9 @@
         <GroupBox Header="Открытие" HorizontalAlignment="Stretch" Margin="12,19,12,48" VerticalAlignment="Stretch" >
             <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" >
                 <Label Content="Путь" HorizontalAlignment="Left" Height="28" Margin="10,24,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtPath" HorizontalAlignment="Stretch" Height="28" Margin="62,24,88,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Путь к открываеммому файлу. Если файла не существует, будет создан новый." MaxLines="1"/>
+                <TextBox x:Name="txtPath" HorizontalAlignment="Stretch" Height="28" Margin="62,24,88,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Путь к открываемому файлу. Если файла не существует, будет создан новый." MaxLines="1"/>
                 <Button x:Name="btnOpen" Content="Выбрать" HorizontalAlignment="Right" Height="28" Margin="270,24,8,0" VerticalAlignment="Top" Width="83" Click="btnOpen_Click"/>
-                <CheckBox x:Name="checkPass" Content="" HorizontalAlignment="Left" Height="20" Margin="10,57,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-2.398,0.08" IsChecked="True" Unchecked="checkPass_Unchecked"/>
+                <CheckBox x:Name="checkPass" Content="" HorizontalAlignment="Left" Height="20" Margin="10,57,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-2.398,0.08" IsChecked="True" Unchecked="checkPass_Unchecked" ToolTip="Если пароль выключить, то будет использован стандартный пароль, и вам не придется вводить его каждый раз. Это сильно снижает безопастность."/>
                 <Label Content="Пароль" HorizontalAlignment="Left" Height="31" Margin="31,57,0,0" VerticalAlignment="Top" Width="52"/>
                 <PasswordBox x:Name="txtPass" HorizontalAlignment="Stretch" Height="31" Margin="96,57,8,52" VerticalAlignment="Top"/>
                 <Button x:Name="btnPathSave" Content="Запомнить путь" HorizontalAlignment="Left" Height="27" Margin="10,114,0,0" VerticalAlignment="Top" Width="109" Click="btnPathSave_Click"/>
